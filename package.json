@@ -2,15 +2,15 @@
     "name": "paging",
     "version": "1.0.0",
     "root": "alice",
-    "description": "",
+    "description": "分页组件。",
     "homepage": "",
     "author": "",
     "repository": {
         "type": "git",
-        "url": ""
+        "url": "https://github.com/aliceui/paging"
     },
     "bugs": {
-        "url": ""
+        "url": "https://github.com/aliceui/paging/issues"
     },
     "license": "MIT",
     "dependencies": {
