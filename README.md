@@ -2,13 +2,15 @@
 
 ---
 
-通用的分页组件。
+通用的分页组件，带有上下页和到达按钮。
 
 ---
 
 ## 演示
 
 <link type="text/css" rel="stylesheet" media="screen" href="src/paging.css">
+
+### 完整示例
 
 ````html
 <div class="ui-paging">
@@ -33,7 +35,7 @@
 </div>
 ````
 
-## 只有上下一页（首页）
+### 只有上下一页（首页）
 
 ````html
 <div class="ui-paging">
@@ -47,7 +49,7 @@
 </div>
 ````
 
-## 只有上下一页（中间）
+### 只有上下一页（中间）
 
 ````html
 <div class="ui-paging">
@@ -61,7 +63,7 @@
 </div>
 ````
 
-## 只有上下一页（末页）
+### 只有上下一页（末页）
 
 ````html
 <div class="ui-paging">
