@@ -3,6 +3,9 @@
     "version": "1.0.0",
     "root": "alice",
     "description": "分页组件。",
+    "keywords": [
+        "分页"
+    ],
     "homepage": "",
     "author": "",
     "repository": {
