@@ -127,4 +127,5 @@ a.ui-paging-next:hover {
     box-shadow:none;
     background: #d4d4d4;
     border-color: #d4d4d4;
+    filter: none;
 }
