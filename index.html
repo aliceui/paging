@@ -25,7 +25,7 @@
 <script>
   (function() {
     var data;
-    seajs._package = data = {"name":"paging","version":"1.0.0","root":"alice","description":"分页组件。","keywords":["分页"],"homepage":"","author":"","repository":{"type":"git","url":"https://github.com/aliceui/paging"},"bugs":{"url":"https://github.com/aliceui/paging/issues"},"license":"MIT","dependencies":{},"tests":["paging"],"output":{"paging.css":"."}}
+    seajs._package = data = {"name":"paging","version":"1.0.0","family":"alice","description":"分页组件。","keywords":["分页"],"homepage":"","author":"","repository":{"type":"git","url":"https://github.com/aliceui/paging"},"bugs":{"url":"https://github.com/aliceui/paging/issues"},"license":"MIT","spm":{"alias":{},"output":["paging.css"]}}
     data.dependencies && (delete data.dependencies['$'])
     data.devDependencies && (delete data.devDependencies['$'])
 
@@ -34,12 +34,14 @@
     seajs.config({ alias: {} })
 
     // for alice
+    var array = [];
     for(var dep in data.dependencies) {
         // 如果依赖的是样式模块
         if (data.dependencies[dep].indexOf('.css') > 0) {
-            seajs.use(dep);
+            array.push(dep);
         }
     }
+    seajs.use(array);
 
   })();
 </script>
@@ -51,15 +53,15 @@
   <body>
     <div id="body-wrapper">
       <aside id="sidebar-wrapper">
-        <h1><a href="./">Paging</a><sup class="package-root"><a href="/">alice</a></sup></h1>
-        <p class="version">当前版本：<a href="http://aralejs.org/docs/online-status.html#alice-paging" title="点击查看此组件发布情况">1.0.0</a></p>
+        <h1><a href="./">Paging</a><sup class="package-root"><a href="/"></a></sup></h1>
+        <p class="version">当前版本：<a href="http://aralejs.org/docs/online-status.html#-paging" title="点击查看此组件发布情况">1.0.0</a></p>
         <p class="description">分页组件。</p>
         <p class="keywords" style="display: none;">分页</p>
         <a class="source" href="https://github.com/aliceui/paging" target="_blank">View the Project</a>
 <ul id="module-output"> 
 </ul>
 <div id="output-card">
-    <h3>alice/paging/1.0.0/<a target="_blank" id="output-file"></a></h3>
+    <h3>/paging/1.0.0/<a target="_blank" id="output-file"></a></h3>
     <p>这是模块的输出文件，请 require 或 seajs.use 以上 ID 来使用本文件，具体 API 请阅读文档。</p>
 </div>
 
@@ -77,7 +79,7 @@
 <h3 id="完整示例">完整示例</h3>
 <div class="nico-insert-code"><div class="ui-paging">
     <a href="#" class="ui-paging-prev">
-        <i class="iconfont" title="左三角形">&#x00DC;</i> 上一页
+        <i class="iconfont" title="左三角形">&#xF039;</i> 上一页
     </a>
     <a href="#" class="ui-paging-item">1</a>
     <a href="#" class="ui-paging-item ui-paging-current">2</a>
@@ -89,7 +91,7 @@
     <span class="ui-paging-ellipsis">...</span>
     <a href="#" class="ui-paging-item">24</a>
     <a href="#" class="ui-paging-next">
-        下一页 <i class="iconfont" title="右三角形">&#x00D6;</i>
+        下一页 <i class="iconfont" title="右三角形">&#xF03A;</i>
     </a>
     <span class="ui-paging-info"><span class="ui-paging-bold">5/7</span>页</span>
     <span class="ui-paging-which"><input name="some_name" value="6" type="text"></span>
@@ -98,7 +100,7 @@
 </div>
 <div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-paging"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span> <span class="attribute">class</span>=<span class="value">"ui-paging-prev"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"iconfont"</span> <span class="attribute">title</span>=<span class="value">"左三角形"</span>&gt;</span>&amp;#x00DC;<span class="tag">&lt;/<span class="title">i</span>&gt;</span> 上一页
+        <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"iconfont"</span> <span class="attribute">title</span>=<span class="value">"左三角形"</span>&gt;</span>&amp;#xF039;<span class="tag">&lt;/<span class="title">i</span>&gt;</span> 上一页
     <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
     <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span> <span class="attribute">class</span>=<span class="value">"ui-paging-item"</span>&gt;</span>1<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
     <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span> <span class="attribute">class</span>=<span class="value">"ui-paging-item ui-paging-current"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
@@ -110,7 +112,7 @@
     <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-paging-ellipsis"</span>&gt;</span>...<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
     <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span> <span class="attribute">class</span>=<span class="value">"ui-paging-item"</span>&gt;</span>24<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
     <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span> <span class="attribute">class</span>=<span class="value">"ui-paging-next"</span>&gt;</span>
-        下一页 <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"iconfont"</span> <span class="attribute">title</span>=<span class="value">"右三角形"</span>&gt;</span>&amp;#x00D6;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+        下一页 <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"iconfont"</span> <span class="attribute">title</span>=<span class="value">"右三角形"</span>&gt;</span>&amp;#xF03A;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
     <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-paging-info"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-paging-bold"</span>&gt;</span>5/7<span class="tag">&lt;/<span class="title">span</span>&gt;</span>页<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
     <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-paging-which"</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">name</span>=<span class="value">"some_name"</span> <span class="attribute">value</span>=<span class="value">"6"</span> <span class="attribute">type</span>=<span class="value">"text"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
@@ -120,60 +122,60 @@
 <div class="nico-insert-code"><div class="ui-paging">
     <span class="ui-paging-info">第<span class="ui-paging-bold">1/7</span>页</span>
     <span class="ui-paging-prev">
-        <i class="iconfont" title="左三角形">&#x00DC;</i> 上一页
+        <i class="iconfont" title="左三角形">&#xF039;</i> 上一页
     </span>
     <a href="#" class="ui-paging-next">
-        下一页 <i class="iconfont" title="右三角形">&#x00D6;</i>
+        下一页 <i class="iconfont" title="右三角形">&#xF03A;</i>
     </a>
 </div>
 </div>
 <div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-paging"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-paging-info"</span>&gt;</span>第<span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-paging-bold"</span>&gt;</span>1/7<span class="tag">&lt;/<span class="title">span</span>&gt;</span>页<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
     <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-paging-prev"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"iconfont"</span> <span class="attribute">title</span>=<span class="value">"左三角形"</span>&gt;</span>&amp;#x00DC;<span class="tag">&lt;/<span class="title">i</span>&gt;</span> 上一页
+        <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"iconfont"</span> <span class="attribute">title</span>=<span class="value">"左三角形"</span>&gt;</span>&amp;#xF039;<span class="tag">&lt;/<span class="title">i</span>&gt;</span> 上一页
     <span class="tag">&lt;/<span class="title">span</span>&gt;</span>
     <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span> <span class="attribute">class</span>=<span class="value">"ui-paging-next"</span>&gt;</span>
-        下一页 <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"iconfont"</span> <span class="attribute">title</span>=<span class="value">"右三角形"</span>&gt;</span>&amp;#x00D6;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+        下一页 <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"iconfont"</span> <span class="attribute">title</span>=<span class="value">"右三角形"</span>&gt;</span>&amp;#xF03A;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 </code></pre></div><h3 id="上下页（中间）">上下页（中间）</h3>
 <div class="nico-insert-code"><div class="ui-paging">
     <span class="ui-paging-info">第<span class="ui-paging-bold">5/7</span>页</span>
     <a href="#" class="ui-paging-prev">
-        <i class="iconfont" title="左三角形">&#x00DC;</i> 上一页
+        <i class="iconfont" title="左三角形">&#xF039;</i> 上一页
     </a>
     <a href="#" class="ui-paging-next">
-        下一页 <i class="iconfont" title="右三角形">&#x00D6;</i>
+        下一页 <i class="iconfont" title="右三角形">&#xF03A;</i>
     </a>
 </div>
 </div>
 <div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-paging"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-paging-info"</span>&gt;</span>第<span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-paging-bold"</span>&gt;</span>5/7<span class="tag">&lt;/<span class="title">span</span>&gt;</span>页<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
     <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span> <span class="attribute">class</span>=<span class="value">"ui-paging-prev"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"iconfont"</span> <span class="attribute">title</span>=<span class="value">"左三角形"</span>&gt;</span>&amp;#x00DC;<span class="tag">&lt;/<span class="title">i</span>&gt;</span> 上一页
+        <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"iconfont"</span> <span class="attribute">title</span>=<span class="value">"左三角形"</span>&gt;</span>&amp;#xF039;<span class="tag">&lt;/<span class="title">i</span>&gt;</span> 上一页
     <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
     <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span> <span class="attribute">class</span>=<span class="value">"ui-paging-next"</span>&gt;</span>
-        下一页 <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"iconfont"</span> <span class="attribute">title</span>=<span class="value">"右三角形"</span>&gt;</span>&amp;#x00D6;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+        下一页 <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"iconfont"</span> <span class="attribute">title</span>=<span class="value">"右三角形"</span>&gt;</span>&amp;#xF03A;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 </code></pre></div><h3 id="上下页（末页）">上下页（末页）</h3>
 <div class="nico-insert-code"><div class="ui-paging">
     <span class="ui-paging-info">第<span class="ui-paging-bold">7/7</span>页</span>
     <a href="#" class="ui-paging-prev">
-        <i class="iconfont" title="左三角形">&#x00DC;</i> 上一页
+        <i class="iconfont" title="左三角形">&#xF039;</i> 上一页
     </a>
     <span class="ui-paging-next">
-        下一页 <i class="iconfont" title="右三角形">&#x00D6;</i>
+        下一页 <i class="iconfont" title="右三角形">&#xF03A;</i>
     </span>
 </div>
 </div>
 <div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-paging"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-paging-info"</span>&gt;</span>第<span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-paging-bold"</span>&gt;</span>7/7<span class="tag">&lt;/<span class="title">span</span>&gt;</span>页<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
     <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span> <span class="attribute">class</span>=<span class="value">"ui-paging-prev"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"iconfont"</span> <span class="attribute">title</span>=<span class="value">"左三角形"</span>&gt;</span>&amp;#x00DC;<span class="tag">&lt;/<span class="title">i</span>&gt;</span> 上一页
+        <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"iconfont"</span> <span class="attribute">title</span>=<span class="value">"左三角形"</span>&gt;</span>&amp;#xF039;<span class="tag">&lt;/<span class="title">i</span>&gt;</span> 上一页
     <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
     <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-paging-next"</span>&gt;</span>
-        下一页 <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"iconfont"</span> <span class="attribute">title</span>=<span class="value">"右三角形"</span>&gt;</span>&amp;#x00D6;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+        下一页 <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"iconfont"</span> <span class="attribute">title</span>=<span class="value">"右三角形"</span>&gt;</span>&amp;#xF03A;<span class="tag">&lt;/<span class="title">i</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">span</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 </code></pre></div>

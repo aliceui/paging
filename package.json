@@ -1,7 +1,7 @@
 {
     "name": "paging",
     "version": "1.0.0",
-    "root": "alice",
+    "family": "alice",
     "description": "分页组件。",
     "keywords": [
         "分页"
@@ -16,10 +16,9 @@
         "url": "https://github.com/aliceui/paging/issues"
     },
     "license": "MIT",
-    "dependencies": {
-    },
-    "tests": ["paging"],
-    "output": {
-        "paging.css": "."
+    "spm": {
+        "alias": {
+        },
+        "output": ["paging.css"]
     }
 }
