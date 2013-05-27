@@ -1,6 +1,6 @@
 {
     "name": "paging",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "family": "alice",
     "description": "分页组件。",
     "keywords": [
