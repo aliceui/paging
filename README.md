@@ -8,7 +8,10 @@
 
 ## 演示
 
-<link type="text/css" rel="stylesheet" media="screen" href="src/paging.css">
+````html
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="./alice-iconfont/1.1.0/index.css">
+````
 
 ### 完整示例
 

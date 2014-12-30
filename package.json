@@ -16,6 +16,9 @@
     },
     "license": "MIT",
     "spm": {
-        "main": "index.css"
+        "main": "index.css",
+        "dependencies": {
+            "alice-iconfont": "1.1.0"
+        }
     }
 }
